@@ -6,10 +6,11 @@
   "devDependencies": {
     "express": "^4.17.1",
     "ts-node-dev": "^1.0.0-pre.52",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "dev": "ts-node-dev ./src/server.ts --clear --respawn --transpile-only --ignore-watch node_modules"
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/server.ts --clear --respawn --transpile-only --ignore-watch node_modules"
   },
   "dependencies": {
     "@types/express": "^4.17.7"
